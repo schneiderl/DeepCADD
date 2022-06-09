@@ -2145,7 +2145,7 @@ class MaskRCNN():
         print("INFO: CAD_KERNEL is " + str(self.config.CAD_KERNEL))
         
         if self.config.CAD_KERNEL == True:
-            weights_path = '/content/deepcadd/cad-weights/model_224_no_top_resnet50_1.h5'
+            weights_path = '/content/deepcadd/deepcadd/cad-weights/model_224_no_top_resnet50_1.h5'
             print("INFO: Using custom CAD weights")
         else:
             TF_WEIGHTS_PATH_NO_TOP = 'https://github.com/fchollet/deep-learning-models/'\
