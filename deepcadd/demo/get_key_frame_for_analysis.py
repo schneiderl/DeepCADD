@@ -55,4 +55,4 @@ def get_key_frame(video_path):
             max_n_of_pixels_idx = x
             #frangi_result = mask
     print(max_n_of_pixels_idx)
-    return frame_array[max_n_of_pixels_idx]
+    return frame_array[max_n_of_pixels_idx], max_n_of_pixels_idx
