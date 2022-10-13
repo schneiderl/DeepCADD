@@ -177,6 +177,18 @@ class CustomDataset(utils.Dataset):
                     height=image_height,
                     annotations=image_annotations
                 )
+                
+    def get_polygons(self, image_id):
+        image_info = self.image_info[image_id]
+        annotations = image_info['annotations']
+        instance_masks = []
+        class_ids = []
+        polygons = []
+        for annotation in annotations:
+            class_id = annotation['category_id']
+            for segmentation in annotation['segmentation']:
+              polygons.append(segmentation)
+        return polygons, class_ids
 
     def load_mask(self, image_id):
         """ Load instance masks for the given image.
